@@ -20,7 +20,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450,
         }}
-        className='w-full rounded-2xl bg-tertiary p-5 sm:w-[360px]'
+        className='w-full rounded-2xl bg-darkest p-5 sm:w-[360px] shadow-card'
       >
         <div className='relative h-[230px] w-full'>
           <Image src={image} alt='project_image' className='h-full w-full rounded-2xl object-cover' />
@@ -37,7 +37,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
         <div className='mt-5'>
           <h3 className='text-[24px] font-bold text-white'>{name}</h3>
-          <p className='mt-2 text-[14px] text-secondary'>{description}</p>
+          <p className='mt-2 text-[14px] text-light'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -61,10 +61,7 @@ const Works = () => {
       </motion.div>
 
       <div className='flex w-full'>
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className='mt-3 max-w-3xl text-[17px] leading-[30px] text-secondary'
-        >
+        <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 max-w-3xl text-[17px] leading-[30px] text-light'>
           下面是我过往工作中的一些项目，这些项目展示了我所掌握的不同技术栈和实践经验，以及我解决复杂问题的能力。
         </motion.p>
       </div>

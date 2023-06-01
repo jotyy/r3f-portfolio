@@ -134,7 +134,7 @@ const experiences = [
     job_description:
       '在「信息技术部」担任Android技术组长，主要负责 移动端和H5的软件的开发、维护、迭代和重构，主要内容如下：',
     icon: hexing,
-    iconBg: '#E6DEDD',
+    iconBg: '#383E56',
     date: '2018.12 - 2020.08',
     points: [
       '主导项目重构工作，对模块进行组件化拆分，大幅提升团队协作开发效率。',
@@ -149,7 +149,7 @@ const experiences = [
     job_description:
       '作为App端Leader，主要负责难题攻坚、架构设计实施、开发人员工具、开发流程管理、代码规范等工作，并作出了以下几点主要贡献：',
     icon: taiyi,
-    iconBg: '#383E56',
+    iconBg: '#E6DEDD',
     date: '2020.09 - 2021.05',
     points: [
       '搭建Android项目模板。其中主要包含以下几个方面：1. 基础架构层，包含MVVM及MVI两种模式，并支持单元测试； 2. 视图层，实现主题化UI库，提供多种自定义控件; 3. 工具层，提供代码生成工具，减少重复劳动',
@@ -163,7 +163,7 @@ const experiences = [
     job_description:
       '作为区块链实验室研发经理，带领10人团队以敏捷方式快速交付功能，进行版本迭代，同时以全栈工程师的角色进行核心模块开发。主要工作如下：',
     icon: jg,
-    iconBg: '#E6DEDD',
+    iconBg: '#383E56',
     date: '2021.06 - 至今',
     points: [
       '区块链SDK开发。使用TypeScript和Rust为公司自研链提供SDK开发，并开发相关的Cli工具，提升开发效率。',

@@ -15,7 +15,7 @@ const ServiceCard = ({ index, title, icon }) => (
     <Tilt>
       <motion.div
         variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-        className='green-pink-gradient w-full rounded-[20px] p-[1px] shadow-card'
+        className='bg-gradient-to-b from-brand to-purple-400 w-full rounded-[20px] p-[1px] shadow-card'
       >
         <div
           options={{
@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
             scale: 1,
             speed: 450,
           }}
-          className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-tertiary px-12 py-5'
+          className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-darkest px-12 py-5'
         >
           <Image src={icon} alt='web-development' className='h-16 w-16 object-contain' />
 
@@ -42,7 +42,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>关于我</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 max-w-3xl text-[17px] leading-[30px] text-secondary'>
+      <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 max-w-3xl text-[17px] leading-[30px] text-light'>
         我是一名全栈工程师，熟练掌握TS、JS、Dart和Kotlin等语言，并且有React、Flutter、Node.js和Ethers.js等框架的丰富实践经验。同时我也是一名研发经理，带领团队密切合作，以创建高效，可扩展的解决方案，解决软件开发的各种问题。
       </motion.p>
 

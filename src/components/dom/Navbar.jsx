@@ -54,7 +54,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? 'text-white' : 'text-secondary'
+                active === nav.title ? 'text-white' : 'text-light'
               } cursor-pointer text-[18px] font-medium hover:text-white`}
               onClick={() => setActive(nav.title)}
             >
@@ -74,14 +74,14 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? 'hidden' : 'flex'
-            } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+            } black-gradient absolute right-0 top-20 z-20 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
           >
             <ul className='flex flex-1 list-none flex-col items-start justify-end gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`cursor-pointer text-[16px] font-medium ${
-                    active === nav.title ? 'text-white' : 'text-secondary'
+                    active === nav.title ? 'text-white' : 'text-light'
                   }`}
                   onClick={() => {
                     setToggle(!toggle)

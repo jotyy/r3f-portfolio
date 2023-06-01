@@ -12,7 +12,7 @@ const View = dynamic(() => import('@/components/canvas').then((mod) => mod.View)
 })
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF('./desktop_pc.glb')
 
   return (
     <mesh>
@@ -54,7 +54,7 @@ const ComputersCanvas = () => {
   }, [])
 
   return (
-    <View className='absolute h-[calc(100vh-100px)] w-screen -z-10'>
+    <View className='absolute h-[calc(100vh-100px)] w-screen'>
       <Suspense fallback={<CanvasLoader />}>
         <Computers isMobile={isMobile} />
         <PerspectiveCamera makeDefault position={[20, 3, 5]} fov={25} />

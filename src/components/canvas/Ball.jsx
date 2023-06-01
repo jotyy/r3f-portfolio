@@ -15,6 +15,7 @@ const Ball = (props) => {
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+      {/* <OrbitControls enableZoom={false} /> */}
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
@@ -30,7 +31,6 @@ const BallCanvas = ({ icon }) => {
   return (
     <View className='h-28 w-28'>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
     </View>

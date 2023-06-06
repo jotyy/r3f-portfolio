@@ -28,7 +28,7 @@
     "next": "^13.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-tilt": "^1.0.2",
+    "react-parallax-tilt": "^1.7.144",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.151.3",
     "three-stdlib": "^2.21.8",

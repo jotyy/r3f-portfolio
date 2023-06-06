@@ -5,7 +5,7 @@ A personal blog site build with NextJS, @react-three/fiber and Threejs.
 ![](https://user-images.githubusercontent.com/2223602/192515435-a3d2c1bb-b79a-428e-92e5-f44c97a54bf7.jpg)
 
 - TTL ~ 100ms
-- First load JS ~ 79kb
+- First load JS ~ 88kb
 - Lighthouse score of 100 (Performance, Accessibility, Best Practices, SEO)
 
 This starter allows you to navigate seamlessly between pages with dynamic dom and/or canvas content without reloading or creating a new canvas every time. 3D components are usable anywhere in the dom. The events, dom, viewport, everything is synchronized!

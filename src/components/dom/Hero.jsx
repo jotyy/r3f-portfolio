@@ -20,7 +20,7 @@ const Hero = () => {
       >
         <div className='mt-5 flex flex-col items-center justify-center'>
           <div className='h-5 w-5 rounded-full bg-brand' />
-          <div className='bg-gradient-to-b from-brand to-[rgba(255, 255, 255, 10)] h-40 w-1 sm:h-80' />
+          <div className='to-[rgba(255, 255, 10)] h-40 w-1 bg-gradient-to-b from-brand sm:h-80' />
         </div>
 
         <div>
@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='absolute bottom-12 flex w-full items-center justify-center md:bottom-16 z-10'>
+      <div className='absolute bottom-12 z-10 flex w-full items-center justify-center md:bottom-16'>
         <a href='#about' aria-label='scroll'>
           <div className='flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-light p-2'>
             <motion.div

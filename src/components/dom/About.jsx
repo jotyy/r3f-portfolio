@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Tilt } from 'react-tilt'
+import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 
 import { styles } from '@/styles'
@@ -15,7 +15,7 @@ const ServiceCard = ({ index, title, icon }) => (
     <Tilt>
       <motion.div
         variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-        className='bg-gradient-to-b from-brand to-purple-400 w-full rounded-[20px] p-[1px] shadow-card'
+        className='w-full rounded-[20px] bg-gradient-to-b from-brand to-purple-400 p-[1px] shadow-card'
       >
         <div
           options={{

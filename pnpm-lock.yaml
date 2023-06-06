@@ -34,9 +34,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
-  react-tilt:
-    specifier: ^1.0.2
-    version: 1.0.2(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
+  react-parallax-tilt:
+    specifier: ^1.7.144
+    version: 1.7.144(react-dom@18.2.0)(react@18.2.0)
   react-vertical-timeline-component:
     specifier: ^3.6.0
     version: 3.6.0(react@18.2.0)
@@ -2005,12 +2005,6 @@ packages:
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
-
-  /@types/react-dom@18.2.4:
-    resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
-    dependencies:
-      '@types/react': 18.2.7
     dev: false
 
   /@types/react-reconciler@0.26.7:
@@ -4984,6 +4978,16 @@ packages:
     resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
     dev: false
 
+  /react-parallax-tilt@1.7.144(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Yl/HNu886AoTl8zupD+Z+CPCiODnHy89tbhwDC3u5dM+fy+VSU4jGLl+oa58Fwzt9Z6CC7xc6izEBWTQIsCWxA==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react-reconciler@0.27.0(react@18.2.0):
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
     engines: {node: '>=0.10.0'}
@@ -4993,20 +4997,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.21.0
-    dev: false
-
-  /react-tilt@1.0.2(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-21tUUsmuw5id/6NDtKqwYTG4taVnw+BoUwIG6YsgPC9GI6cx4BnBuSqgriQYAYcv3bdGNzecaBL+rvQRAm28bg==}
-    peerDependencies:
-      '@types/react': ^18.0.29
-      '@types/react-dom': ^18.0.11
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      '@types/react': 18.2.7
-      '@types/react-dom': 18.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-use-measure@2.1.1(react-dom@18.2.0)(react@18.2.0):

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Tilt } from 'react-tilt'
+import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 
 import { styles } from '@/styles'
@@ -20,7 +20,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450,
         }}
-        className='w-full rounded-2xl bg-darkest p-5 sm:w-[360px] shadow-card'
+        className='w-full rounded-2xl bg-darkest p-5 shadow-card sm:w-[360px]'
       >
         <div className='relative h-[230px] w-full'>
           <Image src={image} alt='project_image' className='h-full w-full rounded-2xl object-cover' />

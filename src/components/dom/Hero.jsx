@@ -20,7 +20,7 @@ const Hero = () => {
       >
         <div className='mt-5 flex flex-col items-center justify-center'>
           <div className='h-5 w-5 rounded-full bg-brand' />
-          <div className='to-[rgba(255, 255, 10)] h-40 w-1 bg-gradient-to-b from-brand sm:h-80' />
+          <div className='h-40 w-1 bg-gradient-to-b from-brand to-white/0 sm:h-80' />
         </div>
 
         <div>

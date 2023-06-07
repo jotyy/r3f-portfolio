@@ -68,10 +68,7 @@ const Contact = () => {
 
   return (
     <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
-      <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
-        className='flex-[0.75] rounded-2xl bg-dark bg-opacity-20 p-8'
-      >
+      <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className='flex-[0.75] rounded-2xl bg-dark/20 p-8'>
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>联系我</h3>
 

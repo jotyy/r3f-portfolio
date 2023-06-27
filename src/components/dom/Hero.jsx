@@ -18,7 +18,7 @@ const Hero = () => {
             width={150}
             height={150}
             alt='man astronaut'
-            src='/img/man-astronaut.png'
+            src='/img/man-astronaut.webp'
             className='z-10'
           />
           <div className='absolute inset-x-0 -bottom-1/4 h-96 w-96 animate-blob rounded-full bg-brand opacity-20 blur-3xl'></div>

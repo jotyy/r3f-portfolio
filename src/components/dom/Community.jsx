@@ -3,7 +3,7 @@ import React from 'react'
 const Community = () => {
   return (
     <div className='mt-6 flex flex-row space-x-4'>
-      <a href='https://twitter.com/jotyy3' target='_blank' className='community-icon'>
+      <a href='https://twitter.com/jotyy3' target='_blank' aria-label='twitter link' className='community-icon'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
@@ -18,7 +18,7 @@ const Community = () => {
           <path d='M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z' />
         </svg>
       </a>
-      <a href='https://github.com/jotyy' target='_blank' className='community-icon'>
+      <a href='https://github.com/jotyy' target='_blank' aria-label='github link' className='community-icon'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'

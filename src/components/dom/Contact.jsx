@@ -70,39 +70,39 @@ const Contact = () => {
     <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className='flex-[0.75] rounded-2xl bg-dark/20 p-8'>
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>联系我</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-white'>姓名</span>
+            <span className='mb-4 font-medium text-white'>Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder='您的名字是？'
+              placeholder='Your name'
               className='rounded-lg border-none bg-darkest px-6 py-4 font-medium text-white outline-none placeholder:text-light'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-white'>邮箱</span>
+            <span className='mb-4 font-medium text-white'>Email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder='您的邮箱是？'
+              placeholder='Your email'
               className='rounded-lg border-none bg-darkest px-6 py-4 font-medium text-white outline-none placeholder:text-light'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='mb-4 font-medium text-white'>留言</span>
+            <span className='mb-4 font-medium text-white'>Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='您想和我说些什么？'
+              placeholder='Your message here'
               className='rounded-lg border-none bg-darkest px-6 py-4 font-medium text-white outline-none placeholder:text-light'
             />
           </label>
@@ -111,7 +111,7 @@ const Contact = () => {
             type='submit'
             className='w-fit rounded-xl bg-darkest px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none'
           >
-            {loading ? '发送中...' : '发送'}
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>

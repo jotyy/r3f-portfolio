@@ -22,8 +22,27 @@ module.exports = {
       screens: {
         xs: '450px',
       },
-      backgroundImage: {
-        'hero-pattern': "url('/img/pattern.webp')",
+      animation: {
+        blob: 'blob 6s linear infinite',
+      },
+      keyframes: {
+        blob: {
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '25%': {
+            transform: 'translate(10px, -10px) scale(1.1)',
+          },
+          '50%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '75%': {
+            transform: 'translate(10px, 10px) scale(0.9)',
+          },
+          '100%': {
+            transform: 'tranlate(0px, 0px) scale(1)',
+          },
+        },
       },
     },
   },

@@ -39,11 +39,13 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>关于我</h2>
+        <h2 className={styles.sectionHeadText}>About</h2>
       </motion.div>
 
       <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 max-w-3xl text-[17px] leading-[30px] text-light'>
-        我是一名全栈工程师，熟练掌握TS、JS、Dart和Kotlin等语言，并且有React、Flutter、Node.js和Ethers.js等框架的丰富实践经验。同时我也是一名研发经理，带领团队密切合作，以创建高效，可扩展的解决方案，解决软件开发的各种问题。
+        I am a full-stack engineer with rich practical experience in frameworks such as React, Flutter, Node.js, and
+        Ethers.js. I lead teams to create efficient and scalable solutions to various software development problems
+        through close collaboration.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

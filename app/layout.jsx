@@ -1,6 +1,6 @@
 import { Layout } from '@/components/dom'
 import '@/global.css'
-import { Analytics } from '@vercel/analytics/react'
+// import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Joshua Lee',
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
         <Layout>{children}</Layout>
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )

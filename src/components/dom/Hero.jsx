@@ -3,35 +3,36 @@
 import { motion } from 'framer-motion'
 
 import { styles } from '@/styles'
-import dynamic from 'next/dynamic'
-import ComputersCanvas from '../canvas/Computers'
-
-const View = dynamic(() => import('@/components/canvas').then((mod) => mod.View), {
-  ssr: false,
-})
+import Image from 'next/image'
+import Community from './Community'
 
 const Hero = () => {
   return (
-    <section className={`relative mx-auto h-screen w-full`}>
-      <ComputersCanvas />
-
+    <section className={`relative mx-auto h-screen w-full overflow-hidden`}>
       <div
-        className={`absolute inset-0 top-[120px]  mx-auto max-w-7xl ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 mx-auto max-w-7xl ${styles.paddingX} flex flex-col items-center justify-center gap-5 md:flex-row`}
       >
-        <div className='mt-5 flex flex-col items-center justify-center'>
-          <div className='h-5 w-5 rounded-full bg-brand' />
-          <div className='h-40 w-1 bg-gradient-to-b from-brand to-white/0 sm:h-80' />
+        <div className='relative'>
+          <Image
+            loading='lazy'
+            width={150}
+            height={150}
+            alt='man astronaut'
+            src='/img/man-astronaut.png'
+            className='z-10'
+          />
+          <div className='absolute inset-x-0 -bottom-1/4 h-96 w-96 animate-blob rounded-full bg-brand opacity-20 blur-3xl'></div>
         </div>
-
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, 我是 <span className='text-brand'>Joshua</span>
+          <h1 className={styles.heroHeadText}>
+            Hi, I&apos;m <span className='text-brand'>Joshua</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            一名全栈开发工程师
+            Full-stack developer, Architect
             <br />
-            TypeScript爱好者，DevOps，区块链从业者
+            TypeScript enthusiast, DevOps, Blockchain practitioner
           </p>
+          <Community />
         </div>
       </div>
 

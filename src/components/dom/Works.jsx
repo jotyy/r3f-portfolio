@@ -57,12 +57,13 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>主要项目</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className='flex w-full'>
         <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-3 max-w-3xl text-[17px] leading-[30px] text-light'>
-          下面是我过往工作中的一些项目，这些项目展示了我所掌握的不同技术栈和实践经验，以及我解决复杂问题的能力。
+          Following projects showcases my mastery of different technology stacks and practical experience, as well as my
+          ability to solve complex problems.
         </motion.p>
       </div>
 

@@ -14,8 +14,8 @@ const StarsCanvas = dynamic(() => import('@/components/dom').then((mod) => mod.S
 export default function Page() {
   return (
     <>
-      <div className='relative z-0 bg-darkest'>
-        <div className='bg-hero-pattern bg-cover bg-center bg-no-repeat'>
+      <div className='relative bg-darkest'>
+        <div>
           <Navbar />
           <Hero />
         </div>

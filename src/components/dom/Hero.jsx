@@ -10,7 +10,7 @@ import { Balancer } from 'react-wrap-balancer'
 const Hero = () => {
   const isMobile = useIsMobile()
   return (
-    <section className='mx-auto min-h-screen w-full overflow-hidden lg:min-h-0'>
+    <section className='mx-auto min-h-screen w-full overflow-hidden pt-12'>
       <div className='container grid min-h-screen items-center justify-center lg:min-h-0 lg:grid-cols-2'>
         <div className='flex w-full flex-col items-center justify-center gap-10 lg:items-start'>
           <div className='relative flex w-full items-center justify-center gap-4 lg:justify-start'>
@@ -93,7 +93,7 @@ const Hero = () => {
 
         {!isMobile && (
           <div className='relative hidden h-[800px] overflow-visible rounded-full lg:block'>
-            <div className='absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full'>
+            <div className='absolute -inset-40 top-1/2 -z-10 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full'>
               <div className='relative h-full w-full'>
                 <motion.div
                   animate={{ opacity: 1 }}
@@ -101,7 +101,7 @@ const Hero = () => {
                   initial={{ opacity: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 />
-                <div className='absolute h-full w-full rounded-full shadow-[inset_0_0_5rem_3rem]' />
+                <div className='absolute h-full w-full rounded-full shadow-[inset_0_0_5rem_3rem] shadow-white/5' />
               </div>
             </div>
             <motion.div

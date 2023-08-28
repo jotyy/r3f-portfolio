@@ -14,19 +14,17 @@ const StarsCanvas = dynamic(() => import('@/components/dom').then((mod) => mod.S
 export default function Page() {
   return (
     <>
-      <div className='relative bg-darkest'>
-        <div>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className='relative z-0'>
-          <StarsCanvas />
-          <Contact />
-        </div>
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <div className='relative z-0'>
+        <StarsCanvas />
+        <Contact />
       </div>
     </>
   )

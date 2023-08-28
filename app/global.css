@@ -88,12 +88,63 @@
   -webkit-text-fill-color: transparent;
 }
 
+.container {
+  @apply mx-auto max-w-[1400px] px-4 md:px-24;
+}
+
 .community-icon {
-  @apply w-10 h-10 rounded-lg border border-slate-600 backdrop-filter backdrop-blur-md flex items-center justify-center transition;
+  /* @apply w-10 h-10 rounded-lg border border-slate-600 backdrop-filter backdrop-blur-md flex items-center justify-center transition; */
+  background: linear-gradient(
+    var(--gradient-angle),
+    hsla(0, 0%, 100%, 0.5),
+    hsla(0, 0%, 100%, 0.1),
+    #fff,
+    hsla(0, 0%, 100%, 0.3)
+  ) !important;
+  animation: gradient-rotate 5s linear infinite reverse;
 }
 
 .community-icon:hover {
   box-shadow: 0 0 2px 2px #00cea830, 0.2rem 0.2rem 8px #00cea830;
+}
+
+@property --gradient-angle {
+  syntax: '<angle>'; /* <- defined as type angle for the transition to work */
+  initial-value: 360deg;
+  inherits: false;
+}
+
+@keyframes gradient-rotate {
+  0% {
+    --gradient-angle: 360deg;
+  }
+
+  100% {
+    --gradient-angle: 0deg;
+  }
+}
+
+.moving-grid-background {
+  will-change: transform;
+  background-size: 3rem 3rem;
+  background-image: linear-gradient(to right, #8882 1px, transparent 1px),
+    linear-gradient(to bottom, #8882 1px, transparent 1px);
+  animation: movingbackground 90s linear infinite !important;
+}
+
+@keyframes movingbackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving-grid-background {
+    animation: none !important;
+  }
 }
 
 /* canvas- styles */

@@ -14,25 +14,6 @@ This starter allows you to navigate seamlessly between pages with dynamic dom an
 
 [Live demo](https://jotyy.vercel.app)
 
-### How to use
-
-#### Installation
-
-_Tailwind is the default style. styled-components (styled) are also available._
-
-```sh
-yarn create r3f-app next my-app
-# yarn create r3f-app <next> my-app <tailwind|styled>? -ts?
-```
-
-### :passport_control: Typescript
-
-For typescript add the parameter `-ts` or `--typescript`:
-
-```sh
-yarn create r3f-app next my-app -ts
-```
-
 ### :mount_fuji: Features
 
 - [x] GLSL imports
@@ -56,11 +37,11 @@ Thanks to [tunnel-rat](https://github.com/pmndrs/tunnel-rat) the starter can por
 
 ### :control_knobs: Available Scripts
 
-- `yarn dev` - Next dev
-- `yarn analyze` - Generate bundle-analyzer
-- `yarn lint` - Audit code quality
-- `yarn build` - Next build
-- `yarn start` - Next start
+- `pnpm dev` - Next dev
+- `pnpm analyze` - Generate bundle-analyzer
+- `pnpm lint` - Audit code quality
+- `pnpm build` - Next build
+- `pnpm start` - Next start
 
 ### ⬛ Stack
 

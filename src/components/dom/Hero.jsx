@@ -13,7 +13,7 @@ const Hero = () => {
     <section className='mx-auto min-h-screen w-full overflow-hidden pt-12'>
       <div className='container grid min-h-screen items-center justify-center lg:min-h-0 lg:grid-cols-2'>
         <div className='flex w-full flex-col items-center justify-center gap-10 lg:items-start'>
-          <div className='relative flex w-full items-center justify-center gap-4 lg:justify-start'>
+          <div className='relative flex w-full flex-col items-center justify-center gap-4 md:flex-row lg:justify-start'>
             <div className='absolute left-1/2 top-1/2 -z-10 hidden h-56 w-56 translate-x-[-15%] translate-y-[-50%] rounded-full bg-slate-400/10 blur-3xl dark:block' />
             <div className='absolute right-1/2 top-1/2 -z-10 hidden h-56 w-56 translate-y-[-40%] rounded-full bg-[#3178c6]/20 blur-3xl dark:block' />
             <Image
@@ -24,7 +24,7 @@ const Hero = () => {
               src='/img/man-astronaut.webp'
               className='z-10'
             />
-            <h1 className='bg-gradient-to-r from-brand to-black bg-clip-text text-6xl font-extrabold text-transparent dark:to-white sm:text-6xl sm:leading-[5.5rem]'>
+            <h1 className='bg-gradient-to-r from-brand to-white bg-clip-text text-center text-6xl font-extrabold text-transparent sm:text-6xl sm:leading-[5.5rem] md:text-left'>
               Hi 👋
               <br />
               I&apos;m Joshua

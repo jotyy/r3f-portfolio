@@ -62,8 +62,8 @@ const CommunityButtons = () => {
 
 const Hero = () => {
   return (
-    <section className='mx-auto min-h-screen w-full overflow-hidden pt-12 relative grid items-center justify-center'>
-      <div className='absolute w-full h-full lg:h-[800px] lg:w-[115%] mx-auto -inset-80 top-1/2 -z-10 -translate-y-1/2 overflow-hidden rounded-b-lg md:rounded-b-3xl lg:rounded-full'>
+    <section className='relative mx-auto grid min-h-screen w-full items-center justify-center overflow-hidden pt-12'>
+      <div className='absolute -inset-80 top-1/2 -z-10 mx-auto h-full w-full -translate-y-1/2 overflow-hidden rounded-b-lg md:rounded-b-3xl lg:h-[800px] lg:w-[115%] lg:rounded-full'>
         <div className='relative h-full w-full'>
           <motion.div
             animate={{ opacity: 1 }}
@@ -71,7 +71,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           />
-          <div className='absolute h-full w-full rounded-b-lg md:rounded-b-3xl lg:rounded-full shadow-[inset_0_0_5rem_3rem] shadow-white/5' />
+          <div className='absolute h-full w-full rounded-b-lg shadow-[inset_0_0_5rem_3rem] shadow-white/5 md:rounded-b-3xl lg:rounded-full' />
         </div>
       </div>
 

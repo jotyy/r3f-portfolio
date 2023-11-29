@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null)
 
   return (
-    <div ref={ref} className='relative w-full h-full overflow-auto touch-auto'>
+    <div ref={ref} className='relative h-full w-full touch-auto overflow-auto'>
       {children}
       <Scene
         style={{

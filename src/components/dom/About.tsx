@@ -8,9 +8,15 @@ import { styles } from '@/styles'
 import { services } from '@/constants'
 import { SectionWrapper } from '@/hoc'
 import { fadeIn, textVariant } from '@/utils/motion'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const ServiceCard = ({ index, title, icon }) => (
+interface ServiceCardProps {
+  index: number
+  title: string
+  icon: StaticImageData
+}
+
+const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
   <div className='w-full xs:w-[250px]'>
     <Tilt>
       <motion.div
@@ -18,11 +24,11 @@ const ServiceCard = ({ index, title, icon }) => (
         className='w-full rounded-[20px] bg-gradient-to-b from-brand to-purple-400 p-[1px] shadow-card'
       >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
+          // options={{
+          //   max: 45,
+          //   scale: 1,
+          //   speed: 450,
+          // }}
           className='flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-darkest px-12 py-5'
         >
           <Image src={icon} alt='web-development' className='h-16 w-16 object-contain' />

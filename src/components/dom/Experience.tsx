@@ -7,12 +7,12 @@ import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 
 import { styles } from '@/styles'
-import { experiences } from '@/constants'
+import { Experience, experiences } from '@/constants'
 import { SectionWrapper } from '@/hoc'
 import { textVariant } from '@/utils/motion'
 import Image from 'next/image'
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{

@@ -9,17 +9,29 @@ import { github } from '@/assets'
 import { SectionWrapper } from '@/hoc'
 import { projects } from '@/constants'
 import { fadeIn, textVariant } from '@/utils/motion'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+interface ProjectCardProps {
+  index: number
+  name: string
+  description: string
+  tags: Array<{
+    name: string
+    color: string
+  }>
+  image: StaticImageData
+  source_code_link: string
+}
+
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }: ProjectCardProps) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        // options={{
+        //   max: 45,
+        //   scale: 1,
+        //   speed: 450,
+        // }}
         className='w-full rounded-2xl bg-darkest p-5 shadow-card sm:w-[360px]'
       >
         <div className='relative h-[230px] w-full'>

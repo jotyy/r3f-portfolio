@@ -24,8 +24,45 @@ import {
   threejs,
   jg,
 } from '@/assets'
+import { StaticImageData } from 'next/image'
 
-export const navLinks = [
+export type NavLink = {
+  id: string
+  title: string
+}
+
+export type Service = {
+  title: string
+  icon: StaticImageData
+}
+
+export type Technology = {
+  name: string
+  icon: StaticImageData
+}
+
+export type Project = {
+  name: string
+  description: string
+  tags: {
+    name: string
+    color: string
+  }[]
+  image: StaticImageData
+  source_code_link: string
+}
+
+export type Experience = {
+  title: string
+  job_description?: string
+  company_name: string
+  icon: StaticImageData
+  iconBg: string
+  date: string
+  points: string[]
+}
+
+export const navLinks: NavLink[] = [
   {
     id: 'about',
     title: 'About',
@@ -40,7 +77,7 @@ export const navLinks = [
   },
 ]
 
-const services = [
+const services: Service[] = [
   {
     title: 'Web Developer',
     icon: web,
@@ -59,7 +96,7 @@ const services = [
   },
 ]
 
-const technologies = [
+const technologies: Technology[] = [
   {
     name: 'HTML 5',
     icon: html,

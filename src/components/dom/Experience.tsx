@@ -1,20 +1,23 @@
 'use client'
 
-import React from 'react'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
-import { motion } from 'framer-motion'
-
 import 'react-vertical-timeline-component/style.min.css'
+
+import React, { useRef } from 'react'
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import { motion, useInView } from 'framer-motion'
 
 import { styles } from '@/styles'
 import { Experience, experiences } from '@/constants'
 import { SectionWrapper } from '@/hoc'
 import { textVariant } from '@/utils/motion'
-import Image from 'next/image'
 
 const ExperienceCard = ({ experience }: { experience: Experience }) => {
+  const ref = useRef<any>(null)
+  const inView = useInView(ref)
+
   return (
     <VerticalTimelineElement
+      visible={inView}
       contentStyle={{
         background: '#27375E',
         color: '#fff',
@@ -23,8 +26,9 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className='flex h-full w-full items-center justify-center'>
-          <Image src={experience.icon} alt={experience.company_name} className='h-[60%] w-[60%] object-contain' />
+        <div ref={ref} className='flex h-full w-full items-center justify-center'>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={experience.icon.src} alt={experience.company_name} className='h-[60%] w-[60%] object-contain' />
         </div>
       }
     >
@@ -58,7 +62,7 @@ const Experience = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
+        <VerticalTimeline animate={true}>
           {experiences.map((experience, index) => (
             <ExperienceCard key={`experience-${index}`} experience={experience} />
           ))}

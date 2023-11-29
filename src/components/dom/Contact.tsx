@@ -11,7 +11,7 @@ import { slideIn } from '@/utils/motion'
 import { env } from 'env.mjs'
 
 const Contact = () => {
-  const formRef = useRef()
+  const formRef = useRef<HTMLFormElement>(null)
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -20,7 +20,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false)
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { target } = e
     const { name, value } = target
 
@@ -30,9 +30,17 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (loading) return
     setLoading(true)
+
+    // validate
+    if (!form.name || !form.email || !form.message) {
+      setLoading(false)
+      alert('Please fill in all fields.')
+      return
+    }
 
     emailjs
       .send(

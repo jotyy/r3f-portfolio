@@ -43,10 +43,7 @@ const Navbar = () => {
           }}
         >
           <Image src={logo} alt='logo' className='h-9 w-9 rounded-full border border-white object-contain' />
-          <p className='flex cursor-pointer text-[18px] font-bold text-white '>
-            Joshua &nbsp;
-            <span className='hidden sm:block'> | Keep Coding</span>
-          </p>
+          <p className='flex cursor-pointer text-[18px] font-bold text-white '>Joshua &nbsp;Lee</p>
         </a>
 
         <ul className='hidden list-none flex-row gap-10 sm:flex'>

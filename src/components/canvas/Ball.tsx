@@ -1,6 +1,6 @@
 'use client'
 
-import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
+import { Decal, Float, useTexture } from '@react-three/drei'
 import { Suspense } from 'react'
 
 import dynamic from 'next/dynamic'
@@ -10,8 +10,8 @@ const View = dynamic(() => import('@/components/canvas').then((mod) => mod.View)
   ssr: false,
 })
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl])
+const Ball = ({ imgUrl }: { imgUrl: string }) => {
+  const [decal] = useTexture([imgUrl])
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -21,13 +21,13 @@ const Ball = (props) => {
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial color='#fff8eb' polygonOffset polygonOffsetFactor={-5} flatShading />
-        <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} scale={1} map={decal} flatShading />
+        <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} scale={1} map={decal} />
       </mesh>
     </Float>
   )
 }
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon }: { icon: string }) => {
   return (
     <View className='h-28 w-28'>
       <Suspense fallback={<CanvasLoader />}>
